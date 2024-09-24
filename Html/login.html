@@ -16,50 +16,52 @@
     <link href="/css/login.css" rel="stylesheet">
 </head>
 <body>
-    <div class="v45_3">
-        <div class="v45_4"></div>
-        <div class="v45_5"></div>
-        <span class="v45_6">Bem-vindo à Biblioteca Virtual!</span>
-        <div class="v45_7"></div>
-        <div class="v45_19">
-            <span class="v45_20">Login</span>
-            <span class="v45_21">Identifique-se para prosseguir</span>
+    <div class="container">
+        <div class="header-background"></div>
+        <div class="logo-container"></div>
+        <span class="welcome-message">Bem-vindo à Biblioteca Virtual!</span>
+        
+        <div class="login-card">
+            <span class="login-title">Login</span>
+            <span class="login-subtitle">Identifique-se para prosseguir</span>
             
             <!-- Formulário de Login -->
             <form action="/login" method="POST">
-                <div class="v45_22">
+                <div class="input-group">
                     <label for="email">E-mail</label>
-                    <input type="email" id="email" name="email" class="v45_24" placeholder="Digite seu e-mail">
+                    <input type="email" id="email" name="email" class="input-field" placeholder="Digite seu e-mail">
                     
                     <label for="password">Senha</label>
-                    <input type="password" id="password" name="password" class="v45_26" placeholder="Digite sua senha">
+                    <input type="password" id="password" name="password" class="input-field" placeholder="Digite sua senha">
                     
                     <!-- Ícone de senha (olho) -->
-                    <span class="v45_27" onclick="togglePasswordVisibility()"><i class="fas fa-eye"></i></span>
+                    <span class="password-toggle" onclick="togglePasswordVisibility()">
+                        <i class="fas fa-eye"></i>
+                    </span>
                     
-                    <div class="v45_28">
-                        <a href="/forgot-password" class="v45_29">Esqueci minha Senha</a>
+                    <div class="forgot-password">
+                        <a href="/forgot-password">Esqueci minha Senha</a>
                     </div>
                     
-                    <div class="v45_30">
-                        <input type="checkbox" id="remember" name="remember" class="v45_31">
+                    <div class="remember-me">
+                        <input type="checkbox" id="remember" name="remember">
                         <label for="remember">Lembre de mim</label>
                     </div>
                     
-                    <button type="submit" class="v45_33">
-                        <span class="v45_34">Acessar</span>
+                    <button type="submit" class="login-button">
+                        Acessar
                     </button>
                 </div>
             </form>
             
-            <span class="v45_35"><a href="/register">Primeiro Acesso</a></span>
+            <span class="register-link"><a href="/register">Primeiro Acesso</a></span>
         </div>
     </div>
 
     <script>
         function togglePasswordVisibility() {
             const passwordField = document.getElementById('password');
-            const icon = document.querySelector('.v45_27 i');
+            const icon = document.querySelector('.password-toggle i');
             if (passwordField.type === 'password') {
                 passwordField.type = 'text';
                 icon.classList.remove('fa-eye');
