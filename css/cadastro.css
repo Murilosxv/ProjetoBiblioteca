@@ -14,21 +14,11 @@ body {
   left: 0px;
   overflow: hidden;
 }
-.v45_38 {
-  width: 100%;
-  height: 395px;
-  background: rgba(48,138,222,1);
-  opacity: 1;
-  position: absolute;
-  top: 13px;
-  left: 0px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  overflow: hidden;
-}
-.v45_39 {
+
+.imgdefundo {
   width: 100%;
   height: 432px;
-  background: url("../images/v45_39.png");
+  background: url("../images/img tablet.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -38,7 +28,7 @@ body {
   left: 0px;
   overflow: hidden;
 }
-.v45_40 {
+.texto {
   width: 272px;
   color: rgba(255,255,255,1);
   position: absolute;
@@ -50,10 +40,10 @@ body {
   opacity: 1;
   text-align: left;
 }
-.v45_41 {
+.imglogo {
   width: 320px;
   height: 101px;
-  background: url("../images/v45_41.png");
+  background: url("../images/somLogo.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -63,7 +53,7 @@ body {
   left: 169px;
   overflow: hidden;
 }
-.v45_53 {
+.box {
   width: 576px;
   height: 545px;
   background: rgba(255,255,255,1);
@@ -74,7 +64,7 @@ body {
   box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.20000000298023224);
   overflow: hidden;
 }
-.v45_54 {
+.textC {
   width: 148px;
   color: rgba(85,168,253,1);
   position: absolute;
@@ -86,7 +76,7 @@ body {
   opacity: 1;
   text-align: left;
 }
-.v45_55 {
+.textI {
   width: 196px;
   color: rgba(112,112,112,1);
   position: absolute;
@@ -98,10 +88,9 @@ body {
   opacity: 1;
   text-align: left;
 }
-.v45_56 {
+.login {
   width: 486px;
   height: 400px;
-  background: url("../images/v45_56.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -111,7 +100,7 @@ body {
   left: 45px;
   overflow: hidden;
 }
-.v45_57 {
+.textE {
   width: 313px;
   color: rgba(119,119,119,1);
   position: absolute;
@@ -123,12 +112,12 @@ body {
   opacity: 1;
   text-align: left;
 }
-.v45_58 {
+.v45_58 {   /* criar barra colocar email */
   width: 486px;
   height: 52px;
-  background: rgba(255,255,255,1);
+  background: rgb(236, 234, 234);
   opacity: 1;
-  position: absolute;
+  position: absolute; 
   top: 36px;
   left: 0px;
   border-top-left-radius: 4px;
@@ -137,7 +126,7 @@ body {
   border-bottom-right-radius: 4px;
   overflow: hidden;
 }
-.v45_59 {
+.textS {
   width: 49px;
   color: rgba(119,119,119,1);
   position: absolute;
@@ -149,10 +138,10 @@ body {
   opacity: 1;
   text-align: left;
 }
-.v45_60 {
+.v45_60 { /* Criar barra colocar senha */
   width: 486px;
   height: 52px;
-  background: rgba(255,255,255,1);
+  background: rgba(236, 234, 234);;
   opacity: 1;
   position: absolute;
   top: 150px;
@@ -163,10 +152,10 @@ body {
   border-bottom-right-radius: 4px;
   overflow: hidden;
 }
-.v45_71 {
+.delete {
   width: 486px;
   height: 52px;
-  background: rgba(255,255,255,1);
+  background: rgba(236, 234, 234);
   opacity: 1;
   position: absolute;
   top: 263px;
@@ -177,31 +166,8 @@ body {
   border-bottom-right-radius: 4px;
   overflow: hidden;
 }
-.v45_77 {
-  width: 22px;
-  color: rgba(85,168,253,1);
-  position: absolute;
-  top: 16px;
-  left: 456px;
-  font-family: Font Awesome 5 Free;
-  font-weight: Solid;
-  font-size: 20px;
-  opacity: 1;
-  text-align: left;
-}
-.v45_61 {
-  width: 22px;
-  color: rgba(85,168,253,1);
-  position: absolute;
-  top: 164px;
-  left: 456px;
-  font-family: Font Awesome 5 Free;
-  font-weight: Solid;
-  font-size: 20px;
-  opacity: 1;
-  text-align: left;
-}
-.v45_67 {
+
+.barraAces {
   width: 486px;
   height: 48px;
   background: rgba(85,168,253,1);
@@ -215,7 +181,7 @@ body {
   border-bottom-right-radius: 6px;
   overflow: hidden;
 }
-.v45_68 {
+.textA {
   width: 50px;
   color: rgba(255,255,255,1);
   position: absolute;
@@ -227,10 +193,9 @@ body {
   opacity: 1;
   text-align: center;
 }
-.v45_72 {
+.delete2 {
   width: 100px;
   height: 100px;
-  background: url("../images/v45_72.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -240,7 +205,7 @@ body {
   left: 17px;
   overflow: hidden;
 }
-.v45_76 {
+.textC1 {
   width: 140px;
   color: rgba(119,119,119,1);
   position: absolute;
