@@ -4,16 +4,7 @@
 body {
   font-size: 14px;
 }
-.v95_10 {
-  width: 100%;
-  height: 1520px;
-  background: none;
-  opacity: 1;
-  position: relative;
-  top: 0px;
-  left: 0px;
-  overflow: hidden;
-}
+
 .v95_11 {
   width: 100%;
   height: 1520px;
@@ -83,10 +74,10 @@ body {
   opacity: 1;
   text-align: left;
 }
-.v95_17 {
+.imgfundo {
   width: 100%;
   height: 291px;
-  background: url("../images/v95_17.png");
+  background: url("../images/img fundo.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
