@@ -6,37 +6,42 @@ body {
   font-family: 'Open Sans', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  background-color: #f7f4f4;
 }
 .container {
-  width: 100%;
-  height: 100vh;
+  width: 100%; /* Define a largura da .container como 100% da largura da tela ou do elemento pai */
+  height: 100vh; /* Define a altura da .container como 100% da altura da viewport (tela) */
+  display: flex; /* Define o layout da .container como flexbox (para usar as propriedades de layout flex) */
+  justify-content: center; /* Alinha os itens dentro da .container no eixo horizontal (eixo X) no centro */
+  align-items: center; /* Alinha os itens dentro da .container no eixo vertical (eixo Y) no centro */
+  flex-direction: column; /* Organiza os itens dentro da .container em uma coluna (verticalmente) */
+}
+.logo-container{
+  background-color: #303942;
+  width: 100px;
+  height: 100px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  left: 600px;%;
 }
+
 .header-background {
-  width: 100%;
-  height: 395px;
-  background: rgba(48,138,222,1);
-  position: absolute;
-  top: 0;
-  left: 0;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  width: 100%; /* Define a largura do elemento como 100% do seu contêiner pai (normalmente a largura da tela ou do elemento pai) */
+  height: 395px; /* Define a altura do elemento como 395 pixels */
+  position: absolute; /* Define o posicionamento do elemento como absoluto, ou seja, ele será posicionado em relação ao contêiner pai com o menor valor de posicionamento (neste caso, o body ou o elemento mais próximo com posição relativa) */
+  top: 0; /* Define o topo do elemento como 0 pixels a partir do topo do contêiner pai */
+  left: 0; /* Define a posição do lado esquerdo do elemento como 0 pixels a partir da borda esquerda do contêiner pai */
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); /* Aplica uma sombra ao elemento, criando um efeito de profundidade */
 }
-.logo-container {
-  width: 320px;
-  height: 101px;
-  background: url("../images/logo.png") no-repeat center center;
-  background-size: cover;
-  position: relative;
-  top: 50px;
+img{
+  width: 100%; /* Define a largura do elemento como 100% do seu contêiner pai (normalmente a largura da tela ou do elemento pai) */
+  height: 600px; 
+  position: absolute;
 }
 .welcome-message {
-  color: white;
+  color: rgb(20, 197, 115);
   font-size: 36px;
-  margin-top: 180px;
+  margin-top: 18px;
+  
 }
 .login-card {
   width: 576px;
@@ -45,6 +50,7 @@ body {
   box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
   position: relative;
+  left: 400px;
 }
 .login-title {
   color: #55A8FD;
@@ -65,14 +71,14 @@ body {
   width: 100%;
   height: 52px;
   padding: 10px;
-  border: 1px solid #e2e2e2;
+  border: 1px solid hsl(0, 0%, 89%);
   border-radius: 4px;
 }
 .password-toggle {
   position: absolute;
   top: 228px;
   right: 60px;
-  color: #55A8FD;
+  color: #303942;
   cursor: pointer;
 }
 .forgot-password {
@@ -110,3 +116,4 @@ body {
   text-decoration: none;
   font-size: 12px;
 }
+
