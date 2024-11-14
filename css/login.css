@@ -9,6 +9,7 @@ body {
   background-color: #f7f4f4;
 }
 .container {
+  position: relative; /* Este 'relative' permite que as imagens sejam posicionadas em relação a este contêiner */
   width: 100%; /* Define a largura da .container como 100% da largura da tela ou do elemento pai */
   height: 100vh; /* Define a altura da .container como 100% da altura da viewport (tela) */
   display: flex; /* Define o layout da .container como flexbox (para usar as propriedades de layout flex) */
@@ -16,35 +17,47 @@ body {
   align-items: center; /* Alinha os itens dentro da .container no eixo vertical (eixo Y) no centro */
   flex-direction: column; /* Organiza os itens dentro da .container em uma coluna (verticalmente) */
 }
-.logo-container{
-  background-color: #303942;
-  width: 100px;
-  height: 100px;
-  display: flex;
-  left: 600px;%;
-}
+
 
 .header-background {
   width: 100%; /* Define a largura do elemento como 100% do seu contêiner pai (normalmente a largura da tela ou do elemento pai) */
   height: 395px; /* Define a altura do elemento como 395 pixels */
+  object-fit: cover; /* Ajusta a imagem para cobrir o contêiner mantendo a proporção */
   position: absolute; /* Define o posicionamento do elemento como absoluto, ou seja, ele será posicionado em relação ao contêiner pai com o menor valor de posicionamento (neste caso, o body ou o elemento mais próximo com posição relativa) */
   top: 0; /* Define o topo do elemento como 0 pixels a partir do topo do contêiner pai */
   left: 0; /* Define a posição do lado esquerdo do elemento como 0 pixels a partir da borda esquerda do contêiner pai */
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); /* Aplica uma sombra ao elemento, criando um efeito de profundidade */
 }
+
+.img-logo {
+position: relative;
+display: flex;
+width: 470px;
+height: 250px;
+top: -20px ;
+left: -230px;
+transform: translate(-50%, -50%); 
+z-index: 1;
+
+}
 img{
   width: 100%; /* Define a largura do elemento como 100% do seu contêiner pai (normalmente a largura da tela ou do elemento pai) */
-  height: 600px; 
+  height: 470px; 
   position: absolute;
 }
 .welcome-message {
-  color: rgb(20, 197, 115);
-  font-size: 36px;
-  margin-top: 18px;
-  
+  position: absolute;
+  width: 350px;
+  top: 28%;  /* Alinha o texto verticalmente no centro */
+  left: 21%; /* Alinha o texto horizontalmente no centro */
+  transform: translate(-50%, -50%); /* Corrige o alinhamento exato no centro */
+  color: white; /* Cor do texto */
+  font-size: 36px; /* Tamanho da fonte */
+  font-weight: bold; /* Estilo da fonte */
 }
 .login-card {
   width: 576px;
+  top: -10%;
   background: white;
   padding: 40px;
   box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.2);
@@ -65,7 +78,7 @@ img{
 .input-group {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
 }
 .input-field {
   width: 100%;
@@ -83,10 +96,10 @@ img{
 }
 .forgot-password {
   text-align: right;
-  margin-top: 10px;
+  margin-top: 5px;
 }
 .forgot-password a {
-  color: #777;
+  color: #55A8FD;
   text-decoration: none;
   font-size: 12px;
 }
@@ -94,18 +107,24 @@ img{
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-top: 20px;
 }
 .login-button {
   width: 100%;
   height: 48px;
+  left: 10px;
   background: #55A8FD;
   color: white;
   border: none;
-  border-radius: 6px;
+  border-radius: 10px;
   font-size: 16px;
   cursor: pointer;
   margin-top: 30px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.login-button-text{
+  align-items: center;
 }
 .register-link {
   text-align: center;
@@ -113,7 +132,7 @@ img{
 }
 .register-link a {
   color: #56A8FE;
+  left: -10px;
   text-decoration: none;
   font-size: 12px;
 }
-
