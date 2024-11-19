@@ -3,47 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Página de Cadastro - Biblioteca Nova Era</title>
     
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
     
-    <!-- Font -->
+    <!-- Font Awesome (Ícones) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnH2N2bWb9dL71urIj1q0sNxBbj18U48URy5Ndd5J1yD1OrF2DJoXHq7rL+lrKjaeVuFAI0Kg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
-    <!-- Link para o CSS -->
+    <!-- Link para o CSS da página -->
     <link href="/css/cadastro.css" rel="stylesheet">
 </head>
 <body>
-    <div class="v45_37">
-        <div class="imgdefundo"></div> <!--Img do de fundo tablet-->
-        <span class="texto">Bem-vindo à Biblioteca Nova Era!</span> 
-        <div class="imglogo"></div> <!-- Somente a logo-->
+    <!-- Container Principal -->
+    <div class="container">
+        <!-- Imagem de fundo -->
+        <img src="/images/img_tablet.jpg" alt="Background" class="header-background">
         
-        <div class="box">
-            <span class="textC">Cadastro</span>
-            <span class="textI">Identifique-se para prosseguir</span>
+        <!-- Texto de boas-vindas -->
+        <div class="welcome-message">Bem-vindo à Biblioteca Nova Era!</div>
+        
+        <!-- Logo da Biblioteca -->
+        <img src="/images/Logo-BibliNovaEra-removebg-preview.png" alt="Logo da Biblioteca" class="img-logo">
+        
+        <!-- Caixa de Cadastro -->
+        <div class="login-card">
+            <span class="login-title">Cadastro</span>
+            <span class="login-subtitle">Identifique-se para prosseguir</span>
             
-            <div class="login">
-                <span class="textE">E-mail</span>
-                <div class="v45_58"></div> <!-- Criar barra colocar email-->
+            <!-- Formulário de Cadastro -->
+            <form>
+                <div class="input-group">
+                    <label for="email" class="input-label">E-mail</label>
+                    <input type="email" id="email" class="input-field" placeholder="Digite seu e-mail" required>
+                    <div id="email-error" class="error-message"></div>
+                </div>
+
+                <div class="input-group">
+                    <label for="password" class="input-label">Senha</label>
+                    <input type="password" id="password" class="input-field" placeholder="Digite sua senha" required>
+                    <div id="password-error" class="error-message"></div>
+                </div>
+
+                <div class="input-group">
+                    <label for="confirm-password" class="input-label">Confirmar Senha</label>
+                    <input type="password" id="confirm-password" class="input-field" placeholder="Confirme sua senha" required>
+                    <div id="confirm-password-error" class="error-message"></div>
+                </div>
                 
-                <span class="textS">Senha</span>
-                <div class="v45_60"></div>  <!-- Criar barra colocar senha-->
-                <div class="delete"> <!-- barra no momento -->   
-                </div>
-            
-                <span class="textC1">Confirmar Senha</span>
-                <div class="delete2"><!-- barra no momento -->
-                </div>
-                
-                <!-- Botão de Login -->
-                <div class="barraAces">
-                    <span class="textA">Acesso</span>
-                </div>
-            </div>
+                <button id="submit-button" class="login-button" type="button" onclick="submitForm()">Cadastrar</button>
+            </form>
         </div>
     </div>
+
+    <script>
+        function submitForm() {
+            document.getElementById("email-error").textContent = "";
+            document.getElementById("password-error").textContent = "";
+            document.getElementById("confirm-password-error").textContent = "";
+
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirm-password").value;
+
+            var isValid = true;
+
+            if (!validateEmail(email)) {
+                document.getElementById("email-error").textContent = "Por favor, insira um e-mail válido.";
+                isValid = false;
+            }
+
+            if (password.length < 6) {
+                document.getElementById("password-error").textContent = "A senha deve ter no mínimo 6 caracteres.";
+                isValid = false;
+            }
+
+            if (password !== confirmPassword) {
+                document.getElementById("confirm-password-error").textContent = "As senhas não coincidem.";
+                isValid = false;
+            }
+
+            if (isValid) {
+                alert("Cadastro realizado com sucesso!");
+            }
+        }
+
+        function validateEmail(email) {
+            var regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            return regex.test(email);
+        }
+    </script>
 </body>
 </html>

@@ -1,219 +1,126 @@
 * {
   box-sizing: border-box;
 }
+
 body {
   font-size: 14px;
-}
-.v45_37 {
-  width: 100%;
-  height: 1024px;
-  background: rgba(255,255,255,1);
-  opacity: 1;
-  position: relative;
-  top: 0px;
-  left: 0px;
-  overflow: hidden;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f4f4; /* Cor de fundo do corpo */
 }
 
-.imgdefundo {
+.container {
+  position: relative; /* Este 'relative' permite que as imagens sejam posicionadas em relação a este contêiner */
+  width: 100%; /* Define a largura da .container como 100% da largura da tela ou do elemento pai */
+  height: 100vh; /* Define a altura da .container como 100% da altura da viewport (tela) */
+  display: flex; /* Define o layout da .container como flexbox (para usar as propriedades de layout flex) */
+  justify-content: center; /* Alinha os itens dentro da .container no eixo horizontal (eixo X) no centro */
+  align-items: center; /* Alinha os itens dentro da .container no eixo vertical (eixo Y) no centro */
+  flex-direction: column; /* Organiza os itens dentro da .container em uma coluna (verticalmente) */
+  }
+
+.header-background {
   width: 100%;
-  height: 432px;
-  background: url("../images/img tablet.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  opacity: 1;
-  position: absolute;
-  top: 50px;
-  left: 0px;
-  overflow: hidden;
-}
-.texto {
-  width: 272px;
-  color: rgba(255,255,255,1);
-  position: absolute;
-  top: 176px;
-  left: 169px;
-  font-family: Inter;
-  font-weight: Regular;
-  font-size: 36px;
-  opacity: 1;
-  text-align: left;
-}
-.imglogo {
-  width: 320px;
-  height: 101px;
-  background: url("../images/somLogo.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  opacity: 1;
-  position: absolute;
-  top: 65px;
-  left: 169px;
-  overflow: hidden;
-}
-.box {
-  width: 576px;
-  height: 545px;
-  background: rgba(255,255,255,1);
-  opacity: 1;
-  position: absolute;
-  top: 205px;
-  left: 720px;
-  box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.20000000298023224);
-  overflow: hidden;
-}
-.textC {
-  width: 148px;
-  color: rgba(85,168,253,1);
-  position: absolute;
-  top: 30px;
-  left: 45px;
-  font-family: Open Sans;
-  font-weight: Bold;
-  font-size: 32px;
-  opacity: 1;
-  text-align: left;
-}
-.textI {
-  width: 196px;
-  color: rgba(112,112,112,1);
-  position: absolute;
-  top: 75px;
-  left: 45px;
-  font-family: Open Sans;
-  font-weight: Regular;
-  font-size: 14px;
-  opacity: 1;
-  text-align: left;
-}
-.login {
-  width: 486px;
-  height: 400px;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  opacity: 1;
-  position: absolute;
-  top: 101px;
-  left: 45px;
-  overflow: hidden;
-}
-.textE {
-  width: 313px;
-  color: rgba(119,119,119,1);
-  position: absolute;
-  top: 1px;
-  left: 0px;
-  font-family: Open Sans;
-  font-weight: Regular;
-  font-size: 17px;
-  opacity: 1;
-  text-align: left;
-}
-.v45_58 {   /* criar barra colocar email */
-  width: 486px;
-  height: 52px;
-  background: rgb(236, 234, 234);
-  opacity: 1;
+  height: 395px;
+  object-fit: cover; 
   position: absolute; 
-  top: 36px;
-  left: 0px;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px;
-  overflow: hidden;
-}
-.textS {
-  width: 49px;
-  color: rgba(119,119,119,1);
-  position: absolute;
-  top: 113px;
-  left: 0px;
-  font-family: Open Sans;
-  font-weight: Regular;
-  font-size: 17px;
-  opacity: 1;
-  text-align: left;
-}
-.v45_60 { /* Criar barra colocar senha */
-  width: 486px;
-  height: 52px;
-  background: rgba(236, 234, 234);;
-  opacity: 1;
-  position: absolute;
-  top: 150px;
-  left: 0px;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px;
-  overflow: hidden;
-}
-.delete {
-  width: 486px;
-  height: 52px;
-  background: rgba(236, 234, 234);
-  opacity: 1;
-  position: absolute;
-  top: 263px;
-  left: 0px;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px;
-  overflow: hidden;
+  top: 0; 
+  left: 0; 
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); 
 }
 
-.barraAces {
-  width: 486px;
+.img-logo {
+  position: relative;
+  display: flex;
+  width: 500px;
+  height: 300px;
+  top: 0px ;
+  left: -440px;
+  transform: translate(-50%, -50%); 
+  z-index: 1;
+}
+
+.welcome-message {
+  position: absolute;
+  width: 350px;
+  top: 28%;  /* Alinha o texto verticalmente no centro */
+  left: 21%; /* Alinha o texto horizontalmente no centro */
+  transform: translate(-50%, -50%); /* Corrige o alinhamento exato no centro */
+  color: white; /* Cor do texto */
+  font-size: 36px; /* Tamanho da fonte */
+  font-weight: bold; /* Estilo da fonte */
+}
+
+.login-card {
+  width: 576px;
+  top: -10%;
+  background: white;
+  padding: 40px;
+  box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  position: relative;
+  left: 400px;
+}
+
+.login-title {
+  color: #55A8FD;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.login-subtitle {
+  color: #707070;
+  font-size: 18px;
+  margin-bottom: 30px;
+  text-align: center; /* Centraliza o subtítulo */
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.input-field {
+  width: 100%;
+  height: 52px;
+  font-size: 15px;
+  padding: 10px;
+  border: 1px solid hsl(0, 0%, 89%);
+  border-radius: 4px;
+}
+
+.password-toggle {
+  position: absolute;
+  top: 228px;
+  right: 60px;
+  color: #303942;
+  cursor: pointer;
+}
+
+.forgot-password {
+  text-align: right;
+  margin-top: 5px;
+}
+
+.forgot-password a {
+  color: #55A8FD;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.login-button {
+  width: 100%;
   height: 48px;
-  background: rgba(85,168,253,1);
-  opacity: 1;
-  position: absolute;
-  top: 347px;
-  left: 0px;
-  border-top-left-radius: 6px;
-  border-top-right-radius: 6px;
-  border-bottom-left-radius: 6px;
-  border-bottom-right-radius: 6px;
-  overflow: hidden;
-}
-.textA {
-  width: 50px;
-  color: rgba(255,255,255,1);
-  position: absolute;
-  top: 10px;
-  left: 217px;
-  font-family: Open Sans;
-  font-weight: Regular;
-  font-size: 14px;
-  opacity: 1;
-  text-align: center;
-}
-.delete2 {
-  width: 100px;
-  height: 100px;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  opacity: 1;
-  position: absolute;
-  top: 82px;
-  left: 17px;
-  overflow: hidden;
-}
-.textC1 {
-  width: 140px;
-  color: rgba(119,119,119,1);
-  position: absolute;
-  top: 235px;
-  left: 0px;
-  font-family: Open Sans;
-  font-weight: Regular;
-  font-size: 17px;
-  opacity: 1;
-  text-align: left;
+  background: #55A8FD;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
