@@ -1,203 +1,86 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-    <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" />
-    <link href="/css/home.css" rel="stylesheet" />
-    <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Nova era</title>
+    <link rel="stylesheet" href="/css/home.css">
 </head>
 <body>
-    <div class="v61_2">
-        <div class="v61_8">
-            <div class="v61_9">
-                <span class="v61_10">Descubra seu Livro</span>
-                <span class="v61_11">Início Acervo</span>
-                <span class="v61_24">Seu Acervo</span>
-                <span class="v61_25">Minhas Listas Sugestões de Leitura Emprestimo</span>
+    <div class="app">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="/images/Logo-BibliNovaEra-removebg-preview.png" alt="Logo Biblioteca Virtual" class="logo-img">
             </div>
-            <div class="v61_27"></div>
-            <div class="v61_28">
-                <div class="v61_29"></div>
-            </div>
-            <div class="v61_36"></div>
-            <div class="v63_79">
-                <div class="v63_80">
-                    <div class="v63_81"></div>
-                    <div class="v29_4054">
-                        <span class="v73_23">NOVO</span>
+            <nav class="side-nav">
+                <h3>Descubra seu Livro</h3>
+                <ul>
+                    <li><a href="#" class="nav-link">Início</a></li>
+                    <li><a href="#" class="nav-link">Acervo</a></li>
+                </ul>
+                <h3>Seu Acervo</h3>
+                <ul>
+                    <li><a href="#" class="nav-link">Minhas Listas</a></li>
+                    <li><a href="#" class="nav-link">Sugestões de Leitura</a></li>
+                    <li><a href="#" class="nav-link">Favoritos</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="header">
+                <div class="user-menu">
+                    <img src="/images/logo-perfil.png" alt="User" class="user-avatar">
+                </div>
+            </header>
+
+            
+            <!-- Featured Books Section -->
+            <section class="book-section">
+                <div class="section-header">
+                    <h2>Sugestões de leitura</h2>
+                    <div class="carousel-controls">
+                        <button class="carousel-btn prev">&lt;</button>
+                        <button class="carousel-btn next">&gt;</button>
                     </div>
-                    <div class="v85_277"></div>
                 </div>
-                <div class="v63_82">
-                    <div class="v63_83"></div>
-                </div>
-                <div class="v63_84">
-                    <div class="v63_85"></div>
-                </div>
-                <div class="v63_86">
-                    <div class="v63_87"></div>
-                </div>
-                <div class="v63_88">
-                    <div class="v63_89"></div>
-                </div>
-                <div class="v63_90">
-                    <div class="v63_91"></div>
-                </div>
-                <span class="v63_92">(0)</span>
-                <div class="v63_93">
-                    <span class="v63_94">Janelas da psicanálise: transmissão, clínica, paternidade, mitos, arte</span>
-                </div>
-                <div class="v63_95">
-                    <span class="v63_96">Fernando Rocha</span>
-                </div>
-            </div>
-            <div class="v63_97">
-                <div class="v63_98">
-                    <div class="v63_99"></div>
-                    <div class="v73_20">
-                        <span class="v73_24">NOVO</span>
+                <div class="book-carousel">
+                    <div class="book-card">
+                        <img src="/images/calculo-integral.png" alt="Calculo integral   " class="book-cover">
+                        <div class="book-info">
+                            <h3>Calculo integral</h3>
+                            <p class="author">Lorem Ipsum</p>
+                            <div class="rating">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">☆</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="v85_278"></div>
+                    <!-- More book cards... -->
                 </div>
-                <div class="v63_100">
-                    <div class="v63_101"></div>
-                </div>
-                <div class="v63_102">
-                    <div class="v63_103"></div>
-                </div>
-                <div class="v63_104">
-                    <div class="v63_105"></div>
-                </div>
-                <div class="v63_106">
-                    <div class="v63_107"></div>
-                </div>
-                <div class="v63_108">
-                    <div class="v63_109"></div>
-                </div>
-                <span class="v63_110">(0)</span>
-                <div class="v63_111">
-                    <span class="v63_112">Tintas de qualidade: livro de rótulos da Abrafati - linha imobiliária</span>
-                </div>
-                <div class="v63_113">
-                    <span class="v63_114">Abrafati</span>
-                </div>
-            </div>
-            <div class="v63_115">
-                <div class="v63_116">
-                    <div class="v63_117"></div>
-                    <div class="v73_21">
-                        <span class="v73_25">NOVO</span>
+            </section>
+
+            <!-- Recently Added Section -->
+            <section class="book-section">
+                <div class="section-header">
+                    <h2>Adicionados Recentemente</h2>
+                    <p class="subtitle">Livros recém chegados à plataforma</p>
+                    <div class="carousel-controls">
+                        <button class="carousel-btn prev">&lt;</button>
+                        <button class="carousel-btn next">&gt;</button>
                     </div>
-                    <div class="v85_279"></div>
                 </div>
-                <div class="v63_118">
-                    <div class="v63_119"></div>
+                <div class="book-carousel">
+                    <!-- Similar book cards structure -->
                 </div>
-                <div class="v63_120">
-                    <div class="v63_121"></div>
-                </div>
-                <div class="v63_122">
-                    <div class="v63_123"></div>
-                </div>
-                <div class="v63_124">
-                    <div class="v63_125"></div>
-                </div>
-                <div class="v63_126">
-                    <div class="v63_127"></div>
-                </div>
-                <span class="v63_128">(0)</span>
-                <div class="v63_129">
-                    <span class="v63_130">Bioquímica experimental: um guia prático para jovens pesquisadores</span>
-                </div>
-                <div class="v63_131">
-                    <span class="v63_132">Malson Neilson de Lucena</span>
-                </div>
-            </div>
-            <div class="v63_133">
-                <div class="v63_134">
-                    <div class="v63_135"></div>
-                    <div class="v73_22">
-                        <span class="v73_26">NOVO</span>
-                    </div>
-                    <div class="v85_280"></div>
-                </div>
-                <div class="v63_136">
-                    <div class="v63_137"></div>
-                </div>
-                <div class="v63_138">
-                    <div class="v63_139"></div>
-                </div>
-                <div class="v63_140">
-                    <div class="v63_141"></div>
-                </div>
-                <div class="v63_142">
-                    <div class="v63_143"></div>
-                </div>
-                <div class="v63_144">
-                    <div class="v63_145"></div>
-                </div>
-                <span class="v63_146">(0)</span>
-                <div class="v63_147">
-                    <span class="v63_148">Tecnologia da Informação e da Comunicação</span>
-                </div>
-                <div class="v63_149">
-                    <span class="v63_150">Fábio Câmara Araújo de Carvalho, Gregori...</span>
-                </div>
-            </div>
-            <div class="v76_7"></div>
-            <span class="v63_172">Digite o nome do livro ou autor(a) que deseja buscar:</span>
-            <div class="v29_3886">
-                <div class="v29_3887">
-                    <div class="v29_3888"></div>
-                </div>
-                <div class="v29_3889">
-                    <div class="v29_3890"></div>
-                </div>
-                <div class="v29_3891">
-                    <div class="v29_3892"></div>
-                </div>
-                <div class="v29_3893">
-                    <div class="v29_3894"></div>
-                </div>
-                <div class="v29_3895">
-                    <div class="v29_3896"></div>
-                </div>
-                <div class="v29_3897">
-                    <div class="v29_3898"></div>
-                </div>
-                <span class="v29_3899">(6)</span>
-                <div class="v29_3900">
-                    <span class="v29_3901">Gravura: história, técnicas e contemporaneidade</span>
-                </div>
-                <div class="v29_3902">
-                    <span class="v29_3903">Andréa Bertoletti, Patricia de Camargo</span>
-                </div>
-            </div>
-            <div class="v29_3700">
-                <div class="v29_3701">
-                    <div class="v29_3702"></div>
-                </div>
-                <div class="v29_3703">
-                    <div class="v29_3704"></div>
-                </div>
-                <div class="v29_3705">
-                    <div class="v29_3706"></div>
-                </div>
-                <div class="v29_3707">
-                    <div class="v29_3708"></div>
-                </div>
-                <div class="v29_3709">
-                    <div class="v29_3710"></div>
-                </div>
-                <div class="v29_3711">
-                    <div class="v29_3712"></div>
-                </div>
-                <span class="v29_3713">(8)</span>
-                <div class="v29_3714">
-                    <span class="v29_3715">Hidrogeografia e gestão de bacias</span>
-                </div>
-                <div class="v29_3716">
-                    <span class="v29_3717">Bruna Daniela de Araujo Taveira</span>
-                </div>
-            </div>
-            <div
+            </section>
+        </main>
+    </div>
+    <script src="home.js"></script>
+</body>
+</html>
