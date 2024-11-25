@@ -5,20 +5,17 @@ document.addEventListener('DOMContentLoaded', function() {
     carousels.forEach(carousel => {
         const prevBtn = carousel.parentElement.querySelector('.prev');
         const nextBtn = carousel.parentElement.querySelector('.next');
-        let scrollAmount = 0;
         
         prevBtn.addEventListener('click', () => {
-            scrollAmount = Math.max(scrollAmount - 300, 0);
-            carousel.scrollTo({
-                left: scrollAmount,
+            carousel.scrollBy({
+                left: -300, // Move para a esquerda
                 behavior: 'smooth'
             });
         });
         
         nextBtn.addEventListener('click', () => {
-            scrollAmount = Math.min(scrollAmount + 300, carousel.scrollWidth - carousel.clientWidth);
-            carousel.scrollTo({
-                left: scrollAmount,
+            carousel.scrollBy({
+                left: 300, // Move para a direita
                 behavior: 'smooth'
             });
         });
