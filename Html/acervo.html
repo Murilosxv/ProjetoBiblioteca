@@ -1,54 +1,124 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
+    <!-- Definindo o conjunto de caracteres para UTF-8 e a responsividade da página -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biblioteca Virtual</title>
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-    
-    <!-- Link para o CSS -->
-    <link href="/css/acervo.css" rel="stylesheet">
+
+    <!-- Título da página, que aparece na aba do navegador -->
+    <title>Biblioteca Nova era</title>
+
+    <!-- Link para o arquivo de estilo CSS -->
+    <link rel="stylesheet" href="/css/home.css">
 </head>
+
 <body>
-    <div class="container">
-        <header>
-            <h1>Descubra seu Livro</h1>
-            <nav>
-                <a href="#">Início</a>
-                <a href="#">Acervo</a>
-                <a href="#">Seu Acervo</a>
-                <a href="#">Minhas Listas</a>
-                <a href="#">Sugestões de Leitura</a>
-                <a href="#">Empréstimo</a>
+    <div class="app">
+        <!-- Sidebar (barra lateral) -->
+        <aside class="sidebar">
+            <!-- Logo da biblioteca -->
+            <div class="logo">
+                <img src="/images/Logo-BibliNovaEra-removebg-preview.png" alt="Logo Biblioteca Virtual"
+                    class="logo-img">
+            </div>
+
+            <!-- Navegação da sidebar -->
+            <nav class="side-nav">
+                <!-- Título para a seção de livros -->
+                <h3>Descubra seu Livro</h3>
+                <!-- Lista de links da sidebar -->
+                <ul>
+                    <li><a href="home.html" class="nav-link">Início</a></li>
+                    <li><a href="acervo.html" class="nav-link">Acervo</a></li>
+                </ul>
+
+                <!-- Título para a seção "Seu Acervo" -->
+                <h3>Seu Acervo</h3>
+                <!-- Lista de links adicionais para o acervo pessoal do usuário -->
+                <ul>
+                    <li><a href="empres.html" class="nav-link">Emprestimo</a></li>
+                    <li><a href="#" class="nav-link">Sugestões de Leitura</a></li>
+                    <li><a href="#" class="nav-link">Favoritos</a></li>
+                </ul>
             </nav>
-        </header>
+        </aside>
 
-        <main>
-            <section class="book-section">
-                <h2>Acervo</h2>
-                <p>Nosso acervo é repleto de conteúdo relevante para você. São milhares de livros à sua disposição, onde você estiver.</p>
-                
-                <button>Filtrar acervo</button>
+        <!-- Main Content (Conteúdo principal da página) -->
+        <main class="main-content">
+            <header class="header">
+                <!-- Menu do usuário com ícone de perfil -->
+                <div class="user-menu">
+                    <img src="/images/logo-perfil.png" alt="User" class="user-avatar">
+                </div>
+            </header>
 
-                <!-- Exemplo de livro -->
-                <div class="book">
-                    <h3>Enfermagem em Unidade de Terapia Intensiva</h3>
-                    <p>Maria Aparecida Salci, Cátia Millene Del...</p>
-                    <span class="rating">(6)</span>
+            <!-- Main Content -->
+            <main class="flex-1 bg-white">
+                <header class="bg-blue-600 text-white p-8">
+                    <h1 class="text-2xl font-bold mb-2">Acervo</h1>
+                    <p class="text-white/80">Nosso acervo é repleto de conteúdo relevante para você. São milhares de
+                        livros à sua disposição, onde você estiver.</p>
+
+                    <!-- Filter Section -->
+                    <div class="mt-8">
+                        <p class="text-lg mb-4">Filtrar acervo</p>
+                        <div class="grid grid-cols-4 gap-2">
+                            <button
+                                class="bg-gray-200 text-gray-800 px-4 py-2 rounded text-center uppercase text-sm font-medium">Categoria</button>
+                            <button
+                                class="bg-gray-200 text-gray-800 px-4 py-2 rounded text-center uppercase text-sm font-medium">Editora</button>
+                            <button
+                                class="bg-gray-200 text-gray-800 px-4 py-2 rounded text-center uppercase text-sm font-medium">Empréstimo</button>
+                            <button
+                                class="bg-gray-200 text-gray-800 px-4 py-2 rounded text-center uppercase text-sm font-medium">Nota</button>
+                        </div>
+                    </div>
+                </header>
+
+                <!-- Book Card -->
+                <div class="book-card">
+                    <!-- Imagem do livro -->
+                    <img src="/images/enfermagem-unidade.png" alt="Calculo integral" class="book-cover">
+
+                    <!-- Informações do livro -->
+                    <div class="book-info">
+                        <h3>Enfermagem em Unidade de...</h3>
+                        <p class="author">Cátia Millene Dell...</p>
+                        <div class="rating">
+                            <!-- Avaliação do livro com estrelas -->
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">☆</span>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="book">
-                    <h3>Histórias e Memórias da Educação no Brasil: Século XX</h3>
-                    <p>Maria Stephanou, Maria Helena Camara</p>
-                    <span class="rating">(6)</span>
+                <div class="book-card">
+                    <!-- Imagem do livro -->
+                    <img src="/images/Fundamentos-Neuropsicopedagogia.png" alt="Calculo integral" class="book-cover">
+
+                    <!-- Informações do livro -->
+                    <div class="book-info">
+                        <h3>Fundamentos da Neuropsico...</h3>
+                        <p class="author">Raphael Moroz Teix...</p>
+                        <div class="rating">
+                            <!-- Avaliação do livro com estrelas -->
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">☆</span>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Adicione outros livros conforme necessário -->
-            </section>
-        </main>
+                <!-- Repeat similar book cards for other books -->
+                <!-- You can copy the book card structure above and change the image, title, author, and rating -->
     </div>
+    </main>
 </body>
+
 </html>

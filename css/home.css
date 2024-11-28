@@ -4,7 +4,7 @@
   --text-primary: #ffffff;
   --text-dif: #575757;
   --text-secondary: #464646;
-  --sidebar-width: 360px;
+  --sidebar-width: 250px;
 }
 
 * {
@@ -17,6 +17,8 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   background-color: var(--secondary-color);
   color: var(--text-primary);
+  overflow-x: hidden;
+  /* Impede a rolagem horizontal */
 }
 
 .app {
@@ -53,7 +55,8 @@ body {
   list-style: none;
 }
 
-.nav-link { /* Aqui da para ver a primeira cor que aparece nos link da nav */
+.nav-link {
+  /* Aqui da para ver a primeira cor que aparece nos link da nav */
   color: var(--text-dif);
   text-decoration: none;
   padding: 0.5rem 0;
@@ -61,17 +64,22 @@ body {
   transition: color 0.3s;
 }
 
-.nav-link:hover {   /* Aqui da para ver a segunda cor que aparece nos link da nav */
+.nav-link:hover {
+  /* Aqui da para ver a segunda cor que aparece nos link da nav */
   color: var(--primary-color);
 }
 
 .main-content {
   background-image: url('/images/fundo.jpg');
-  background-size: cover; /* Faz a imagem de fundo cobrir toda a área */
+  background-size: cover;
+  /* Faz a imagem de fundo cobrir toda a área */
   background-repeat: no-repeat;
-  background-position: center; /* Centraliza a imagem de fundo */
-  width: 100%; /* Define a largura como 100% do contêiner */
-  height: 700px; /* Define a altura fixa */
+  background-position: center;
+  /* Centraliza a imagem de fundo */
+  width: 100%;
+  /* Define a largura como 100% do contêiner */
+  height: 700px;
+  /* Define a altura fixa */
   margin-left: var(--sidebar-width);
   flex: 1;
   padding: 2rem;
@@ -98,16 +106,17 @@ body {
   margin-bottom: 3rem;
 }
 
-h5{
+h5 {
   color: #f5f5f7;
   font-size: 27px;
 }
+
 .section-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1.0rem;
-  
+
 }
 
 .section-header h2 {
@@ -121,26 +130,42 @@ h5{
 }
 
 .book-card {
-  width: 250px; /* Define a largura do elemento como 250 pixels */
-  background-color: rgba(255, 255, 255, 0); /* Define a cor de fundo como transparente */
-  border-radius: 10px; /* Aplica bordas arredondadas */
-  text-align: center; /* Centraliza o texto */
-  padding: 15px; /* Adiciona um espaço interno */
-  margin: 50px; /* Define uma margem externa */
-  transition: transform 0.3s, box-shadow 0.3s; /* Efeito de transição para hover */
-  scroll-snap-align: center; /* Faz com que os itens se alinhem no centro */
+  width: 250px;
+  /* Define a largura do elemento como 250 pixels */
+  background-color: rgba(255, 255, 255, 0);
+  /* Define a cor de fundo como transparente */
+  border-radius: 10px;
+  /* Aplica bordas arredondadas */
+  text-align: center;
+  /* Centraliza o texto */
+  padding: 15px;
+  /* Adiciona um espaço interno */
+  margin: 50px;
+  /* Define uma margem externa */
+  transition: transform 0.3s, box-shadow 0.3s;
+  /* Efeito de transição para hover */
+  scroll-snap-align: center;
+  /* Faz com que os itens se alinhem no centro */
 }
 
 .book-card2 {
-  width: 250px; /* Define a largura do elemento como 250 pixels */
-  background-color: rgba(255, 255, 255, 0); /* Define a cor de fundo como transparente */
-  border-radius: 10px; /* Aplica bordas arredondadas */
-  text-align: center; /* Centraliza o texto */
-  padding: 15px; /* Adiciona um espaço interno */
-  margin: 20px; /* Define uma margem externa */
-  transition: transform 0.3s, box-shadow 0.3s; /* Efeito de transição para hover */
-  scroll-snap-align: center; /* Faz com que os itens se alinhem no centro */
-  color:var(--text-dif);
+  width: 250px;
+  /* Define a largura do elemento como 250 pixels */
+  background-color: rgba(255, 255, 255, 0);
+  /* Define a cor de fundo como transparente */
+  border-radius: 10px;
+  /* Aplica bordas arredondadas */
+  text-align: center;
+  /* Centraliza o texto */
+  padding: 15px;
+  /* Adiciona um espaço interno */
+  margin: 20px;
+  /* Define uma margem externa */
+  transition: transform 0.3s, box-shadow 0.3s;
+  /* Efeito de transição para hover */
+  scroll-snap-align: center;
+  /* Faz com que os itens se alinhem no centro */
+  color: var(--text-dif);
 }
 
 .book-card:hover {
@@ -149,9 +174,12 @@ h5{
 }
 
 .book-cover {
-  width: 101%; /* Faz a imagem ocupar toda a largura do card */
-  height: 300px; /* Ajusta a imagem para preencher o espaço sem distorção */
-  object-position: center; /* Centraliza a imagem */
+  width: 101%;
+  /* Faz a imagem ocupar toda a largura do card */
+  height: 300px;
+  /* Ajusta a imagem para preencher o espaço sem distorção */
+  object-position: center;
+  /* Centraliza a imagem */
 }
 
 .book-info {
@@ -160,10 +188,11 @@ h5{
 
 .book-info2 {
   padding: 1rem;
-  color:var(--text-dif);
+  color: var(--text-dif);
 }
 
-.book-info h3 {  /* titulo */
+.book-info h3 {
+  /* titulo */
   font-size: 1rem;
   margin-bottom: 0.5rem;
 }
@@ -178,29 +207,19 @@ h5{
   color: #ffd700;
 }
 
-h2{
+h2 {
   color: var(--text-dif);
 }
 
 /* Controle do carrossel */
 /* Contêiner do carrossel */
-.carousel-container {
-  position: relative;
-  max-width: 100%; /* Ajusta o carrossel ao tamanho do contêiner */
-}
-
-/* Controles do carrossel */
+/* Controle do carrossel */
 .carousel-controls {
   display: flex;
   justify-content: space-between;
-  position: absolute;
-  top: 50%;
-  width: 100%;
-  transform: translateY(-50%);
-  z-index: 10;
+  gap: 1rem;
 }
 
-/* Botões de controle */
 .carousel-btn {
   background: white;
   border: 1px solid #ddd;
@@ -220,7 +239,6 @@ h2{
   border-color: var(--primary-color);
 }
 
-/* Carrossel de livros */
 .book-carousel {
   display: flex;
   overflow-x: auto;
@@ -228,5 +246,30 @@ h2{
   gap: 1rem;
   padding: 1rem;
   width: 100%;
+  /* Ajuste conforme necessário */
 }
 
+/* Carousel Styles */
+.book-carousel {
+  display: flex;
+  gap: 1.5rem;
+  /* Espaço entre os itens */
+  overflow-x: auto;
+  /* Permite o scroll horizontal */
+  scroll-snap-type: x mandatory;
+  /* Faz com que o carrossel 'pule' entre os itens */
+  -webkit-overflow-scrolling: touch;
+  /* Melhor desempenho em dispositivos móveis */
+}
+
+.book-carousel2 {
+  display: flex;
+  gap: 1.5rem;
+  /* Espaço entre os itens */
+  overflow-x: auto;
+  /* Permite o scroll horizontal */
+  scroll-snap-type: x mandatory;
+  /* Faz com que o carrossel 'pule' entre os itens */
+  -webkit-overflow-scrolling: touch;
+  /* Melhor desempenho em dispositivos móveis */
+}
