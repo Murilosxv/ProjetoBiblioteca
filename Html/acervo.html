@@ -1,25 +1,29 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <!-- Definindo o conjunto de caracteres para UTF-8 e a responsividade da página -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- Título da página, que aparece na aba do navegador -->
     <title>Biblioteca Nova era</title>
-    
+
     <!-- Link para o arquivo de estilo CSS -->
     <link rel="stylesheet" href="/css/acervo.css">
+    
 </head>
+
 <body>
     <div class="app">
         <!-- Sidebar (barra lateral) -->
         <aside class="sidebar">
             <!-- Logo da biblioteca -->
             <div class="logo">
-                <img src="/images/Logo-BibliNovaEra-removebg-preview.png" alt="Logo Biblioteca Virtual" class="logo-img">
+                <img src="/images/Logo-BibliNovaEra-removebg-preview.png" alt="Logo Biblioteca Virtual"
+                    class="logo-img">
             </div>
-            
+
             <!-- Navegação da sidebar -->
             <nav class="side-nav">
                 <!-- Título para a seção de livros -->
@@ -35,7 +39,7 @@
                 <!-- Lista de links adicionais para o acervo pessoal do usuário -->
                 <ul>
                     <li><a href="empres.html" class="nav-link">Emprestimo</a></li>
-                    <li><a href="#" class="nav-link">Sugestões de Leitura</a></li> 
+                    <li><a href="#" class="nav-link">Sugestões de Leitura</a></li>
                     <li><a href="#" class="nav-link">Favoritos</a></li>
                 </ul>
             </nav>
@@ -46,36 +50,45 @@
             <header class="header">
                 <!-- Menu do usuário com ícone de perfil -->
                 <div class="user-menu">
-                    <img src="/images/logo-perfil.png" alt="User" class="user-avatar">
+                    <img src="/images/logo-perfil.png" alt="User" id="info-image"  class="user-avatar">
+                    <div id="info-popup" class="popup">
+                        <p><strong>Nome:</strong> <span id="name"></span></p>
+                        <p><strong>E-mail:</strong> <span id="email"></span></p>
+                        <ul>
+                            <li><a href="adm.html">Administração</a></li>
+                          </ul>
+                          
+                        
+                      </div>
                 </div>
             </header>
 
-    <!-- Main Content -->
-    <div class="acervo-container">
-        <h1>Acervo</h1>
-        <p>
-          Nosso acervo é repleto de conteúdo relevante para você. São milhares de
-          livros à sua disposição, onde você estiver.
-        </p>
-        <div class="barra-branca">
-        <div class="filtro-container">
-          <button class="filtro-botao">CATEGORIA</button>
-          <button class="filtro-botao">EDITORA</button>
-          <button class="filtro-botao">EMPRÉSTIMO</button>
-          <button class="filtro-botao">NOTA</button>
-        </div>
-        </div>
-       </div>
+            <!-- Main Content -->
+            <div class="acervo-container">
+                <h1>Acervo</h1>
+                <p>
+                    Nosso acervo é repleto de conteúdo relevante para você. São milhares de
+                    livros à sua disposição, onde você estiver.
+                </p>
+                <div class="barra-branca">
+                    <div class="filtro-container">
+                        <button class="filtro-botao">CATEGORIA</button>
+                        <button class="filtro-botao">EDITORA</button>
+                        <button class="filtro-botao">EMPRÉSTIMO</button>
+                        <button class="filtro-botao">NOTA</button>
+                    </div>
+                </div>
+            </div>
     </div>
-      
 
-        <!-- Books Grid -->
-         <div class="book-container">
+
+    <!-- Books Grid -->
+    <div class="book-container">
 
         <div class="book-card">
             <!-- Imagem do livro -->
             <img src="/images/calculo-integral.png" alt="Calculo integral" class="book-cover">
-            
+
             <!-- Informações do livro -->
             <div class="book-info">
                 <h3>Calculo integral</h3>
@@ -93,26 +106,7 @@
         <div class="book-card">
             <!-- Imagem do livro -->
             <img src="/images/calculo-integral.png" alt="Calculo integral" class="book-cover">
-            
-            <!-- Informações do livro -->
-            <div class="book-info">
-                <h3>Calculo integral</h3>
-                <p class="author">Lorem Ipsum</p>
-                <div class="rating">
-                    <!-- Avaliação do livro com estrelas -->
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">☆</span>
-                </div>
-            </div>
-        </div>
 
-        <div class="book-card">
-            <!-- Imagem do livro -->
-            <img src="/images/calculo-integral.png" alt="Calculo integral" class="book-cover">
-            
             <!-- Informações do livro -->
             <div class="book-info">
                 <h3>Calculo integral</h3>
@@ -131,7 +125,7 @@
         <div class="book-card">
             <!-- Imagem do livro -->
             <img src="/images/calculo-integral.png" alt="Calculo integral" class="book-cover">
-            
+
             <!-- Informações do livro -->
             <div class="book-info">
                 <h3>Calculo integral</h3>
@@ -150,7 +144,7 @@
         <div class="book-card">
             <!-- Imagem do livro -->
             <img src="/images/calculo-integral.png" alt="Calculo integral" class="book-cover">
-            
+
             <!-- Informações do livro -->
             <div class="book-info">
                 <h3>Calculo integral</h3>
@@ -169,7 +163,64 @@
         <div class="book-card">
             <!-- Imagem do livro -->
             <img src="/images/calculo-integral.png" alt="Calculo integral" class="book-cover">
-            
+
+            <!-- Informações do livro -->
+            <div class="book-info">
+                <h3>Calculo integral</h3>
+                <p class="author">Lorem Ipsum</p>
+                <div class="rating">
+                    <!-- Avaliação do livro com estrelas -->
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">☆</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="book-card">
+            <!-- Imagem do livro -->
+            <img src="/images/calculo-integral.png" alt="Calculo integral" class="book-cover">
+
+            <!-- Informações do livro -->
+            <div class="book-info">
+                <h3>Calculo integral</h3>
+                <p class="author">Lorem Ipsum</p>
+                <div class="rating">
+                    <!-- Avaliação do livro com estrelas -->
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">☆</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="book-card">
+            <!-- Imagem do livro -->
+            <img src="/images/calculo-integral.png" alt="Calculo integral" class="book-cover">
+
+            <!-- Informações do livro -->
+            <div class="book-info">
+                <h3>Calculo integral</h3>
+                <p class="author">Lorem Ipsum</p>
+                <div class="rating">
+                    <!-- Avaliação do livro com estrelas -->
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">☆</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="book-card">
+            <!-- Imagem do livro -->
+            <img src="/images/calculo-integral.png" alt="Calculo integral" class="book-cover">
+
             <!-- Informações do livro -->
             <div class="book-info">
                 <h3>Calculo integral</h3>
@@ -187,10 +238,11 @@
 
 
 
-            <!-- Repeat similar book cards for other books -->
-            <!-- You can copy the book card structure above and change the image, title, author, and rating -->
-        </div>
-       
-    </main>
+        <!-- Repeat similar book cards for other books -->
+        <!-- You can copy the book card structure above and change the image, title, author, and rating -->
+    </div>
+        </main>
+    <script src="/JS/perfil.js"></script>
 </body>
+
 </html>

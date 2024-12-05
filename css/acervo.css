@@ -32,6 +32,7 @@ body {
   padding: 32px;
   position: fixed;
   height: 100vh;
+  margin-right: 200px;
   box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -84,6 +85,30 @@ body {
   padding: 2rem;
 }
 
+/* Estilo do popup */
+.popup {
+  position: absolute;
+  top: 120px;
+  left: 1600px;
+  background: rgba(31, 29, 29, 0.11);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  border-radius: 8px;
+  display: none;
+  z-index: 10;
+  width: 250px;
+  text-align: center;
+}
+
+.popup.active {
+  display: block;
+}
+
+/* Estilo dos textos */
+.popup p {
+  margin: 10px 0;
+}
+
 
 .header {
   display: flex;
@@ -127,7 +152,7 @@ body {
   flex-wrap: wrap;  /* Permite que os itens quebrem para a próxima linha */
   justify-content: center; /* Centraliza os itens horizontalmente */
   gap: px; /* Espaçamento entre os livros */
-  margin: 0 auto; /* Centraliza o contêiner na tela */
+  margin-left: 250px;
 }
 
 .book-card {
@@ -141,13 +166,13 @@ body {
   /* Centraliza o texto */
   padding: 15px;
   /* Adiciona um espaço interno */
-  margin: 90px;
+  margin: 20px;
   /* Define uma margem externa */
   transition: transform 0.3s, box-shadow 0.3s;
   /* Efeito de transição para hover */
   scroll-snap-align: center;
   /* Faz com que os itens se alinhem no centro */
-  margin-left: 345px;
+  margin-top: 70px;
 
 }
 
@@ -166,10 +191,6 @@ body {
 }
 
 .book-info {
-  padding: 1rem;
-}
-
-.book-info2 {
   padding: 1rem;
   color: var(--text-dif);
 }

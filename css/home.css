@@ -17,8 +17,9 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   background-color: var(--secondary-color);
   color: var(--text-primary);
-  overflow-x: hidden;
+  
   /* Impede a rolagem horizontal */
+  
 }
 
 .app {
@@ -98,6 +99,61 @@ body {
   border-radius: 50%;
   cursor: pointer;
   z-index: 1;
+}
+
+.profile-container {
+  text-align: center;
+}
+
+.profile-img {
+  border-radius: 50%;
+  cursor: pointer;
+  width: 100px;
+  height: 100px;
+  border: 3px solid #4CAF50;
+  transition: transform 0.3s ease;
+}
+
+.profile-img:hover {
+  transform: scale(1.1);
+}
+
+/* Estilo da barra de informações */
+.info-bar {
+  display: none;
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+  z-index: 1000;
+}
+
+.info-bar h2 {
+  margin-top: 0;
+}
+
+.info-bar p {
+  margin: 10px 0;
+}
+
+.info-bar button {
+  background-color: #f44336;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.info-bar button:hover {
+  background-color: #e53935;
 }
 
 

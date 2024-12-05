@@ -23,16 +23,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-    // Add hover effect to book cards
-    const bookCards = document.querySelectorAll('.book-card');
-    bookCards.forEach(card => {
-        card.addEventListener('mouseenter', () => {
-            card.style.transform = 'translateY(-5px)';
-        });
-        
-        card.addEventListener('mouseleave', () => {
-            card.style.transform = 'translateY(0)';
-        });
-    });
+
 
 
