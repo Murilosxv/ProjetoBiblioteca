@@ -151,7 +151,7 @@ body {
   display: flex;
   flex-wrap: wrap;  /* Permite que os itens quebrem para a próxima linha */
   justify-content: center; /* Centraliza os itens horizontalmente */
-  gap: px; /* Espaçamento entre os livros */
+  gap: 10px; /* Espaçamento entre os livros */
   margin-left: 250px;
 }
 
