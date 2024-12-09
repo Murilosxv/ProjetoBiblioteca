@@ -89,7 +89,7 @@ body {
 .popup {
   position: absolute;
   top: 120px;
-  left: 1600px;
+  left: 87%;
   background: rgba(31, 29, 29, 0.11);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   padding: 20px;

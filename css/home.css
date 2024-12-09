@@ -118,6 +118,30 @@ body {
   transform: scale(1.1);
 }
 
+/* Estilo do popup */
+.popup {
+  position: absolute;
+  top: 10px;
+  left: 82%;
+  background: rgba(31, 29, 29, 0.11);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  border-radius: 8px;
+  display: none;
+  z-index: 999;
+  width: 250px;
+  text-align: center;
+}
+
+.popup.active {
+  display: block;
+}
+
+/* Estilo dos textos */
+.popup p {
+  margin: 10px 0;
+}
+
 /* Estilo da barra de informações */
 .info-bar {
   display: none;

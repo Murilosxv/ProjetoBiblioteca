@@ -47,15 +47,13 @@
             <header class="header">
                 <!-- Menu do usuário com ícone de perfil -->
                 <div class="user-menu">
-                    <img src="/images/logo-perfil.png" alt="User" class="user-avatar">
-                    <div id="info-bar" class="info-bar">
-                        <h2>Informações do Perfil</h2>
-                        <p><strong>Nome:</strong> João Silva</p>
-                        <p><strong>Email:</strong> joao.silva@example.com</p>
-                        <p><strong>Idade:</strong> 30 anos</p>
-                        <p><strong>Localização:</strong> São Paulo, SP</p>
-                        <button onclick="toggleInfo()">Fechar</button>
-                    </div>
+                    <img src="/images/logo-perfil.png" alt="User" id="info-image"  class="user-avatar">
+                    <div id="info-popup" class="popup">
+                        <p><strong>Nome:</strong> <span id="name"></span></p>
+                        <p><strong>E-mail:</strong> <span id="email"></span></p>
+                        <ul>
+                            <li><a href="adm.html">Administração</a></li>
+                          </ul>
                 
                 </div>
 
@@ -307,7 +305,7 @@
 
     <!-- Arquivo JavaScript (aqui você pode adicionar interatividade, como navegação no carrossel) -->
     <script src="/JS/home.js"></script>
-    <script src="/JS/home.js"></script>
+    <script src="/JS/perfil.js"></script>
     
 </body>
 </html>
