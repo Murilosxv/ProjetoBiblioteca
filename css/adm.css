@@ -80,22 +80,26 @@ body {
 
 
 
+.page-header{
 
-      .page-title {
-        color: white;
-        font-size: 24px;
-        margin-bottom: 8px;
-      }
 
-      .page-subtitle {
-        color: rgba(255, 255, 255, 0.8);
-        font-size: 16px;
-      }
+}
+
+.page-title {
+color: white;
+font-size: 24px;
+margin-bottom: 8px;
+}
+
+.page-subtitle {
+color: rgba(255, 255, 255, 0.8);
+font-size: 16px;
+}
 
       .search-container {
         display: flex;
-        gap: 16px;
-        margin-bottom: 100px;
+        gap: px;
+        margin-top:50px;
         justify-content: center;
       }
 
@@ -103,12 +107,11 @@ body {
         padding: 8px 16px;
         border: none;
         border-radius: 4px;
-        width: 200px;   
+        width: 265px;   
       }
 
       .books-grid {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(300px, 1fr));
+        display: flex;
         
       }
 
@@ -143,10 +146,12 @@ body {
       }
 
       .book-cover {
-        width: 120px;
-        height: 160px;
-        object-fit: cover;
-        margin-bottom: 16px;
+        width: 101%;
+        /* Faz a imagem ocupar toda a largura do card */
+        height: 300px;
+        /* Ajusta a imagem para preencher o espaço sem distorção */
+        object-position: center;
+        /* Centraliza a imagem */
       }
 
       .book-title {
@@ -158,7 +163,7 @@ body {
 
       .book-author {
         font-size: 14px;
-        color: #6b7280;
+        color:  #6b7280;
       }
 
       .book-rating {
