@@ -235,7 +235,7 @@ h2 {
   border-radius: 5px; /* Bordas arredondadas */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para destacar */
   margin: 20px auto; /* Centraliza a barra */
-  max-width: 1200px; /* Define a largura máxima */
+  max-width:75%; /* Define a largura máxima */
   margin-top: 95px;
 }
 
@@ -248,43 +248,29 @@ h2 {
 }
 
 
-
-
 .filtro-botao {
   padding: 5px 90px;
   border: 1px solid #c4c4c4; /* Borda cinza clara */
   border-radius: 5px;
   background-color: #D9D9D9; /* Fundo cinza claro */
-  color: #000; /* Texto preto */
+  color: #000000d5; /* Texto preto */
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
-.filtro-botao:hover {
-  background-color: #e0e0e0; /* Fundo cinza mais escuro no hover */
+
+.opcoes-filtro {
+  margin-top: 2px;
+  display: none; /* Esconde por padrão */
+  color: var(--text-dif);
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 
-/* Custom scrollbar styles */
-::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-}
 
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border-radius: 3px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 3px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
 
 /* Responsive adjustments */
 @media (max-width: 640px) {

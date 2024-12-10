@@ -1,68 +1,143 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
+    <!-- Definindo o conjunto de caracteres para UTF-8 e a responsividade da página -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-    <!-- Link para o CSS -->
-    <link href="/css/Lista.css" rel="stylesheet">
+
+    <!-- Título da página, que aparece na aba do navegador -->
+    <title>Biblioteca Nova era</title>
+
+    <!-- Link para o arquivo de estilo CSS -->
+    <link rel="stylesheet" href="/css/Lista.css">
+    
 </head>
+
 <body>
-    <div class="v95_10">
-        <div class="v95_11">
-            <div class="v95_12">
-                <span class="v95_13">Descubra seu Livro</span>
-                <span class="v95_14">Início Acervo</span>
-                <span class="v95_15">Seu Acervo</span>
-                <span class="v95_16">Minhas Listas Sugestões de Leitura Emprestimo</span>
+    <div class="app">
+        <!-- Sidebar (barra lateral) -->
+        <aside class="sidebar">
+            <!-- Logo da biblioteca -->
+            <div class="logo">
+                <img src="/images/Logo-BibliNovaEra-removebg-preview.png" alt="Logo Biblioteca Virtual"
+                    class="logo-img">
             </div>
-            <div class="imgfundo"></div>
-            <div class="v95_18">
-                <div class="v95_19"></div>
-            </div>
-            <div class="v95_20"></div>
-            <div class="v95_21"></div>
-            <div class="v95_22"></div>
-            <div class="v95_23"></div>
-            <div class="v95_24"></div>
-            <div class="v95_25"></div>
-            <span class="v95_26">CATEGORIA</span>
-            <span class="v95_27">EDITORA</span>
-            <span class="v95_28">EMPRESTIMO</span>
-            <span class="v95_29">NOTA</span>
-            <span class="v95_30">Emprestimo Aqui voce pode encontrar seus emprestimos</span>
-            <div class="v95_50">
-                <div class="v95_51">
-                    <div class="v95_52"></div>
-                    <div class="v95_53"></div>
+
+            <!-- Navegação da sidebar -->
+            <nav class="side-nav">
+                <!-- Título para a seção de livros -->
+                <h3>Descubra seu Livro</h3>
+                <!-- Lista de links da sidebar -->
+                <ul>
+                    <li><a href="home.html" class="nav-link">Início</a></li>
+                    <li><a href="acervo.html" class="nav-link">Acervo</a></li>
+                </ul>
+
+                <!-- Título para a seção "Seu Acervo" -->
+                <h3>Seu Acervo</h3>
+                <!-- Lista de links adicionais para o acervo pessoal do usuário -->
+                <ul>
+                    <li><a href="Lista.html" class="nav-link">Seus Livros</a></li>
+
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content (Conteúdo principal da página) -->
+        <main class="main-content">
+            <header class="header">
+                <!-- Menu do usuário com ícone de perfil -->
+                <div class="user-menu">
+                    <img src="/images/logo-perfil.png" alt="User" id="info-image"  class="user-avatar">
+                    <div id="info-popup" class="popup">
+                        <p><strong>Nome:</strong> <span id="name"></span></p>
+                        <p><strong>E-mail:</strong> <span id="email"></span></p>
+                        <ul>
+                            <li><a href="adm.html">Administração</a></li>
+                          </ul>
+                          
+                        
+                      </div>
                 </div>
-                <div class="v95_54">
-                    <div class="v95_55"></div>
+            </header>
+
+              <!-- Main Content -->
+              <div class="acervo-container">
+                <h1>Seus Livros</h1>
+                <p>Seu histórico de livros está disponível para consulta.</p>
+                <div class="barra-branca">
+                    <div class="filtro-container">
+                        <div class="filtro-item">
+                            <button class="filtro-botao" onclick="mostrarOpcoes('categoria')">CATEGORIA</button>
+                            <div id="categoria-filtro" class="opcoes-filtro"></div>
+                        </div>
+                        <div class="filtro-item">
+                            <button class="filtro-botao" onclick="mostrarOpcoes('editora')">EDITORA</button>
+                            <div id="editora-filtro" class="opcoes-filtro"></div>
+                        </div>
+                        <div class="filtro-item">
+                            <button class="filtro-botao" onclick="mostrarOpcoes('nota')">NOTA</button>
+                            <div id="nota-filtro" class="opcoes-filtro"></div>
+                        </div>
+                        <div class="filtro-item">
+                            <button class="filtro-botao" onclick="mostrarOpcoes('titulo')">TÍTULO</button>
+                            <div id="titulo-filtro" class="opcoes-filtro"></div>
+                        </div>
+                    </div>
                 </div>
-                <div class="v95_56">
-                    <div class="v95_57"></div>
-                </div>
-                <div class="v95_58">
-                    <div class="v95_59"></div>
-                </div>
-                <div class="v95_60">
-                    <div class="v95_61"></div>
-                </div>
-                <div class="v95_62">
-                    <div class="v95_63"></div>
-                </div>
-                <span class="v95_64">(6)</span>
-                <div class="v95_65">
-                    <span class="v95_66">Histórias e memórias da educação no Brasil: século XX</span>
-                </div>
-                <div class="v95_67">
-                    <span class="v95_68">Maria Stephanou, Maria Helena Camara</span>
-                </div>
-            </div>
+ <!-- Books Grid -->
+ <div class="book-container">
+    <div class="book-card" data-categoria="matematica" data-editora="Editora X" data-nota="4">
+        <img src="/images/calculo-integral.png" alt="Cálculo Integral" class="book-cover">
+        <div class="book-info">
+            <h3>Cálculo Integral</h3>
+            <p class="author">Lorem Ipsum</p>
+            <div class="rating">★★★★☆</div>
         </div>
     </div>
+
+    <div class="book-card" data-categoria="educacao" data-editora="Editora Y" data-nota="4">
+        <img src="/images/didatico-metodos.png" alt="Didática e Métodos de Ensino" class="book-cover">
+        <div class="book-info">
+            <h3>Didática e Métodos de Ensino</h3>
+            <p class="author">Maria Lucia Estivallet</p>
+            <div class="rating">★★★★☆</div>
+        </div>
+    </div>
+    
+    <div class="book-card" data-categoria="saude" data-editora="Editora Z" data-nota="4">
+        <img src="/images/enfermagem-unidade.png" alt="Enfermagem em Unidade de Saúde" class="book-cover">
+        <div class="book-info">
+            <h3>Enfermagem em Unidade de Saúde</h3>
+            <p class="author">Cátia Millene Dell</p>
+            <div class="rating">★★★★☆</div>
+        </div>
+    </div>
+
+    <div class="book-card" data-categoria="psicologia" data-editora="Editora ABC" data-nota="4">
+    <img src="/images/Fundamentos-Neuropsicopedagogia.png" alt="Fundamentos da Neuropsicopedagogia" class="book-cover">
+    <div class="book-info">
+        <h3>Fundamentos da Neuropsicopedagogia</h3>
+        <p class="author">Raphael Moroz Teixeira</p>
+        <div class="rating">★★★★☆</div>
+    </div>
+</div>
+
+<div class="book-card" data-categoria="historia" data-editora="Editora XYZ" data-nota="4">
+    <img src="/images/historias-memorias.png" alt="Histórias e Memórias" class="book-cover">
+    <div class="book-info">
+        <h3>Histórias e Memórias da...</h3>
+        <p class="author">Raphael Moroz Teixeira</p>
+        <div class="rating">★★★★☆</div>
+    </div>
+</div>
+
+
+
+</main>
+<script src="/JS/perfil.js"></script>
+<script src="/JS/filtro.js"></script>
 </body>
+
 </html>

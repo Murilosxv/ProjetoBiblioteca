@@ -1,4 +1,176 @@
-/* Custom styles */
+:root {
+  --primary-color: #0066cc;
+  --secondary-color: #f5f5f7;
+  --text-primary: #ffffff;
+  --text-dif: #575757;
+  --text-secondary: #464646;
+  --sidebar-width: 250px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background-color: var(--secondary-color);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  /* Impede a rolagem horizontal */
+}
+
+.app {
+  display: flex;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  width: var(--sidebar-width);
+  background-color: white;
+  padding: 32px;
+  position: fixed;
+  height: 100vh;
+  margin-right: 200px;
+  box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  margin-bottom: 2rem;
+}
+
+.logo-img {
+  width: 150px;
+  height: auto;
+}
+
+.side-nav h3 {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin: 1.5rem 0 0.5rem;
+}
+
+.side-nav ul {
+  list-style: none;
+}
+
+.nav-link {
+  /* Aqui da para ver a primeira cor que aparece nos link da nav */
+  color: var(--text-dif);
+  text-decoration: none;
+  padding: 0.5rem 0;
+  display: block;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  /* Aqui da para ver a segunda cor que aparece nos link da nav */
+  color: var(--primary-color);
+}
+
+.main-content {
+  background-image: url('/images/fundo.jpg');
+  background-size: cover;
+  /* Faz a imagem de fundo cobrir toda a área */
+  background-repeat: no-repeat;
+  background-position: center;
+  /* Centraliza a imagem de fundo */
+  width: 100%;
+  /* Define a largura como 100% do contêiner */
+  height: 370px;
+  /* Define a altura fixa */
+  margin-left: var(--sidebar-width);
+  flex: 1;
+  padding: 2rem;
+}
+
+/* Estilo do popup */
+.popup {
+  position: absolute;
+  top: 120px;
+  left: 87%;
+  background: rgba(31, 29, 29, 0.11);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  border-radius: 8px;
+  display: none;
+  z-index: 10;
+  width: 250px;
+  text-align: center;
+}
+
+.popup.active {
+  display: block;
+}
+
+/* Estilo dos textos */
+.popup p {
+  margin: 10px 0;
+}
+
+
+.header {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 2rem;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.barra-branca {
+  background-color: white; /* Fundo branco atrás dos botões */
+  padding: 20px; /* Espaçamento interno */
+  border-radius: 5px; /* Bordas arredondadas */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para destacar */
+  margin: 20px auto; /* Centraliza a barra */
+  max-width:80%; /* Define a largura máxima */
+  margin-top: 160px;
+}
+
+.filtro-container {
+  display: flex;
+  justify-content: center;
+  gap:30px;
+  margin-top: 5px;
+}
+
+
+.filtro-botao {
+  padding: 5px 90px;
+  border: 1px solid #c4c4c4; /* Borda cinza clara */
+  border-radius: 5px;
+  background-color: #D9D9D9; /* Fundo cinza claro */
+  color: #000000d5; /* Texto preto */
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+
+.opcoes-filtro {
+  margin-top: 2px;
+  display: none; /* Esconde por padrão */
+  color: var(--text-dif);
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.book-container {
+  display: flex;
+  flex-wrap: wrap;  /* Permite que os itens quebrem para a próxima linha */
+  justify-content: center; /* Centraliza os itens horizontalmente */
+  gap: 10px; /* Espaçamento entre os livros */
+  margin-left: 250px;
+}
+
 .book-card {
   width: 250px;
   /* Define a largura do elemento como 250 pixels */
@@ -10,16 +182,33 @@
   /* Centraliza o texto */
   padding: 15px;
   /* Adiciona um espaço interno */
-  margin: 50px;
+  margin: 20px;
   /* Define uma margem externa */
   transition: transform 0.3s, box-shadow 0.3s;
   /* Efeito de transição para hover */
   scroll-snap-align: center;
   /* Faz com que os itens se alinhem no centro */
+  margin-top: 70px;
+
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.book-cover {
+  width: 101%;
+  /* Faz a imagem ocupar toda a largura do card */
+  height: 300px;
+  /* Ajusta a imagem para preencher o espaço sem distorção */
+  object-position: center;
+  /* Centraliza a imagem */
 }
 
 .book-info {
   padding: 1rem;
+  color: var(--text-dif);
 }
 
 .book-info h3 {
@@ -38,64 +227,6 @@
   color: #ffd700;
 }
 
-
-.book-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-}
-
-/* Custom scrollbar styles */
-::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-}
-
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border-radius: 3px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 3px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
-
-/* Responsive adjustments */
-@media (max-width: 640px) {
-  aside {
-    width: 100%;
-    position: fixed;
-    bottom: 0;
-    z-index: 50;
-    height: auto;
-    padding: 1rem;
-  }
-
-  main {
-    margin-bottom: 4rem;
-  }
-
-  .grid-cols-4 {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.5rem;
-  }
-}
-
-/* Book card specific styles */
-.book-card img {
-  aspect-ratio: 3/4;
-  object-fit: cover;
-}
-
-.book-card .absolute {
-  opacity: 0;
-  transition: opacity 0.2s ease-in-out;
-}
-
-.book-card:hover .absolute {
-  opacity: 1;
+h2 {
+  color: var(--text-dif);
 }

@@ -67,181 +67,93 @@
                 <h1>Acervo</h1>
                 <p>
                     Nosso acervo é repleto de conteúdo relevante para você. São milhares de
-                    livros à sua disposição, onde você estiver.
+                    livros à sua disposição, disponível em PDF.
                 </p>
                 <div class="barra-branca">
                     <div class="filtro-container">
-                        <button class="filtro-botao">CATEGORIA</button>
-                        <button class="filtro-botao">EDITORA</button>
-                        <button class="filtro-botao">EMPRÉSTIMO</button>
-                        <button class="filtro-botao">NOTA</button>
+                        <div class="filtro-item">
+                            <button class="filtro-botao" onclick="mostrarOpcoes('categoria')">CATEGORIA</button>
+                            <div id="categoria-filtro" class="opcoes-filtro"></div>
+                        </div>
+                        <div class="filtro-item">
+                            <button class="filtro-botao" onclick="mostrarOpcoes('editora')">EDITORA</button>
+                            <div id="editora-filtro" class="opcoes-filtro"></div>
+                        </div>
+                        <div class="filtro-item">
+                            <button class="filtro-botao" onclick="mostrarOpcoes('nota')">NOTA</button>
+                            <div id="nota-filtro" class="opcoes-filtro"></div>
+                        </div>
+                        <div class="filtro-item">
+                            <button class="filtro-botao" onclick="mostrarOpcoes('titulo')">TÍTULO</button>
+                            <div id="titulo-filtro" class="opcoes-filtro"></div>
+                        </div>
                     </div>
                 </div>
-            </div>
-    </div>
-
 
     <!-- Books Grid -->
     <div class="book-container">
-
-        <div class="book-card">
-            <!-- Imagem do livro -->
-            <img src="/images/calculo-integral.png" alt="Calculo integral" class="book-cover">
-
-            <!-- Informações do livro -->
-            <div class="book-info">
-                <h3>Calculo integral</h3>
-                <p class="author">Lorem Ipsum</p>
-                <div class="rating">
-                    <!-- Avaliação do livro com estrelas -->
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">☆</span>
+            <div class="book-card" data-categoria="matematica" data-editora="Editora X" data-nota="4">
+                <img src="/images/calculo-integral.png" alt="Cálculo Integral" class="book-cover">
+                <div class="book-info">
+                    <h3>Cálculo Integral</h3>
+                    <p class="author">Lorem Ipsum</p>
+                    <div class="rating">★★★★☆</div>
                 </div>
             </div>
-        </div>
-        <div class="book-card">
-            <!-- Imagem do livro -->
-            <img src="/images/calculo-integral.png" alt="Calculo integral" class="book-cover">
 
-            <!-- Informações do livro -->
-            <div class="book-info">
-                <h3>Calculo integral</h3>
-                <p class="author">Lorem Ipsum</p>
-                <div class="rating">
-                    <!-- Avaliação do livro com estrelas -->
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">☆</span>
+
+            <div class="book-container">
+                <div class="book-card" data-categoria="matematica" data-editora="Editora X" data-nota="4">
+                    <img src="/images/calculo-integral.png" alt="Cálculo Integral" class="book-cover">
+                    <div class="book-info">
+                        <h3>Cálculo Integral</h3>
+                        <p class="author">Lorem Ipsum</p>
+                        <div class="rating">★★★★☆</div>
+                    </div>
+                </div>
+            
+                <div class="book-card" data-categoria="educacao" data-editora="Editora Y" data-nota="4">
+                    <img src="/images/didatico-metodos.png" alt="Didática e Métodos de Ensino" class="book-cover">
+                    <div class="book-info">
+                        <h3>Didática e Métodos de Ensino</h3>
+                        <p class="author">Maria Lucia Estivallet</p>
+                        <div class="rating">★★★★☆</div>
+                    </div>
+                </div>
+                
+                <div class="book-card" data-categoria="saude" data-editora="Editora Z" data-nota="4">
+                    <img src="/images/enfermagem-unidade.png" alt="Enfermagem em Unidade de Saúde" class="book-cover">
+                    <div class="book-info">
+                        <h3>Enfermagem em Unidade de Saúde</h3>
+                        <p class="author">Cátia Millene Dell</p>
+                        <div class="rating">★★★★☆</div>
+                    </div>
+                </div>
+            
+                <div class="book-card" data-categoria="psicologia" data-editora="Editora ABC" data-nota="4">
+                <img src="/images/Fundamentos-Neuropsicopedagogia.png" alt="Fundamentos da Neuropsicopedagogia" class="book-cover">
+                <div class="book-info">
+                    <h3>Fundamentos da Neuropsicopedagogia</h3>
+                    <p class="author">Raphael Moroz Teixeira</p>
+                    <div class="rating">★★★★☆</div>
                 </div>
             </div>
-        </div>
-
-        <div class="book-card">
-            <!-- Imagem do livro -->
-            <img src="/images/calculo-integral.png" alt="Calculo integral" class="book-cover">
-
-            <!-- Informações do livro -->
-            <div class="book-info">
-                <h3>Calculo integral</h3>
-                <p class="author">Lorem Ipsum</p>
-                <div class="rating">
-                    <!-- Avaliação do livro com estrelas -->
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">☆</span>
+            
+            <div class="book-card" data-categoria="historia" data-editora="Editora XYZ" data-nota="4">
+                <img src="/images/historias-memorias.png" alt="Histórias e Memórias" class="book-cover">
+                <div class="book-info">
+                    <h3>Histórias e Memórias da...</h3>
+                    <p class="author">Raphael Moroz Teixeira</p>
+                    <div class="rating">★★★★☆</div>
                 </div>
             </div>
-        </div>
-
-        <div class="book-card">
-            <!-- Imagem do livro -->
-            <img src="/images/calculo-integral.png" alt="Calculo integral" class="book-cover">
-
-            <!-- Informações do livro -->
-            <div class="book-info">
-                <h3>Calculo integral</h3>
-                <p class="author">Lorem Ipsum</p>
-                <div class="rating">
-                    <!-- Avaliação do livro com estrelas -->
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">☆</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="book-card">
-            <!-- Imagem do livro -->
-            <img src="/images/calculo-integral.png" alt="Calculo integral" class="book-cover">
-
-            <!-- Informações do livro -->
-            <div class="book-info">
-                <h3>Calculo integral</h3>
-                <p class="author">Lorem Ipsum</p>
-                <div class="rating">
-                    <!-- Avaliação do livro com estrelas -->
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">☆</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="book-card">
-            <!-- Imagem do livro -->
-            <img src="/images/calculo-integral.png" alt="Calculo integral" class="book-cover">
-
-            <!-- Informações do livro -->
-            <div class="book-info">
-                <h3>Calculo integral</h3>
-                <p class="author">Lorem Ipsum</p>
-                <div class="rating">
-                    <!-- Avaliação do livro com estrelas -->
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">☆</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="book-card">
-            <!-- Imagem do livro -->
-            <img src="/images/calculo-integral.png" alt="Calculo integral" class="book-cover">
-
-            <!-- Informações do livro -->
-            <div class="book-info">
-                <h3>Calculo integral</h3>
-                <p class="author">Lorem Ipsum</p>
-                <div class="rating">
-                    <!-- Avaliação do livro com estrelas -->
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">☆</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="book-card">
-            <!-- Imagem do livro -->
-            <img src="/images/calculo-integral.png" alt="Calculo integral" class="book-cover">
-
-            <!-- Informações do livro -->
-            <div class="book-info">
-                <h3>Calculo integral</h3>
-                <p class="author">Lorem Ipsum</p>
-                <div class="rating">
-                    <!-- Avaliação do livro com estrelas -->
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">☆</span>
-                </div>
-            </div>
-        </div>
-
-
-
+            
         <!-- Repeat similar book cards for other books -->
         <!-- You can copy the book card structure above and change the image, title, author, and rating -->
     </div>
         </main>
     <script src="/JS/perfil.js"></script>
+    <script src="/JS/filtro.js"></script>
 </body>
 
 </html>
